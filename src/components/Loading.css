@@ -1,0 +1,253 @@
+@font-face {
+    font-family: 'Genshin';
+    src: url('./font/zh-cn.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+
+  .containerUF {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 20px;
+    background-color: #946d196c;
+    border: 2px solid #42536456;
+    flex-wrap: wrap;
+    height: auto;
+}
+body {
+    font-size: 16px;
+    position: relative;
+    min-height: 100vh;
+    font-family:'Genshin';
+    color: #946d19;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    z-index: 0;
+  }
+  
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/src/components/bg.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(2px);
+    z-index: -1;
+  }
+
+.input {
+    font-family: 'Genshin';
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 2px solid #3a5065;
+    width: 250px;
+    height: 20px;
+    margin-bottom: 0;
+    background: #fff0f6;
+    transition: all 0.3s ease;
+}
+
+.input:focus {
+    border-color: #3b557c;
+    box-shadow: 0 0 8px rgba(168, 255, 255, 0.808);
+}
+
+.addUserBtn {
+    font-family: 'Genshin';
+    color: #3b557c;
+    border: 2px solid #3b557c;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 150px;
+}
+
+.addUserBtn:disabled {
+    background-color: #f8dc8d1f;
+    cursor: not-allowed;
+}
+
+.addUserBtn:hover {
+    background-color:#182840;
+    transform: scale(1.05);
+}
+
+
+.fetchingUL {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.fu {
+    font-size: 24px;
+    font-weight: bold;
+    color: #946d19;
+    margin-bottom: 20px;
+}
+
+.listOfUSER {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+li {
+    color:#66542c;
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: rgba(252, 252, 252, 0.301);
+    border-radius: 20px;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.4);
+    font-weight: bold;
+    transition: all 0.3s ease;
+    max-width: 200px;
+    text-align: center;
+    width: 100%;
+}
+
+li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 20px #182840;
+}
+
+
+.containerUL {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+.listItem {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff65;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(68, 26, 47, 0.3);
+    transition: all 0.3s ease;
+    font-size: 18px;
+    font-weight: bold;
+    width: 150px; 
+    text-align: center;
+}
+
+
+.deleteBtn {
+    font-family: 'Genshin';
+    background-color: #182840;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.deleteBtn:hover {
+    background-color:#946d19;
+    transform: scale(1.1);
+}
+
+
+.error {
+    color: #946d19;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+.loader {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.loader .ClipLoader {
+    border-color: #946d19;
+}
+
+
+.loader {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.loading-gif {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.loader_text{
+    color: #946d19;
+
+}
+
+.genshin-logo {
+    width: 100px;
+    height: auto;
+    flex-shrink: 0;
+    vertical-align: left;
+}
+
+@media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  
+    .input{
+      width: 80%;
+      max-width: 300px;
+    }
+    .addUserBtn {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    .containerUF {
+      width: 100%;
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .listItem {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    .genshin-logo {
+      width: 100px;
+      margin-bottom: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .fu {
+      font-size: 20px;
+    }
+  
+    .deleteBtn {
+      font-size: 12px;
+      padding: 6px 12px;
+    }
+  }
